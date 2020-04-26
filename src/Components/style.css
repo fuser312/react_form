@@ -1,0 +1,30 @@
+.inp{
+    margin: 40px;
+}
+
+.MuiInputBase-root.MuiInput-root.MuiInput-underline {
+    width: 100%;
+}
+p{
+    padding-top: 20px;
+}
+.MuiFormControl-root MuiTextField-root{
+    width: 100%;
+}
+
+.MuiButton-containedPrimary {
+    color: #fff;
+    background-color: #3f51b5;
+    margin-bottom: 20px;
+}
+
+.but{
+    margin-bottom: 20px;
+}
+.MuiButton-root {
+    margin-bottom: 20px;
+}
+
+.form{
+    margin: 20px;
+}
