@@ -107,6 +107,20 @@ class EnquiryForm extends React.Component {
         return this.state.isLoading ? this.state.text = "loading" : "";
     }
 
+    deleteUser=(customerID)=>{
+        let  dataCopy=this.state.data.slice();
+        let newData=[];
+        for(let i=0;i<dataCopy.length;i++){
+            if(dataCopy[i]['customerID']!==customerID){
+                newData.push(dataCopy[i]);
+            }
+        }
+        console.log(newData);
+        this.setState({
+            data:newData
+        });
+    }
+
     render() {
         return (
             <div>
@@ -149,7 +163,9 @@ class EnquiryForm extends React.Component {
                 {/*    <SimpleTable data={this.state.data}/>*/}
                 {/*</div>*/}
                 <div className="form">
-                    <SimpleTable data={this.state.data} deleteData={(index) => {}}/>
+                    <div>
+                        {(this.state.data.length!==0)&&<SimpleTable data={this.state.data} deleteUser={this.deleteUser}/>}
+                    </div>
                 </div>
 
             </div>

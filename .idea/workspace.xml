@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bd1430c-95b7-4e36-a913-a4c54d2cc9fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnquiryForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Table/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/SingleRow/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EnquiryForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnquiryForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Table/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Table/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,13 +91,33 @@
       <workItem from="1587706187159" duration="1587000" />
       <workItem from="1587708719022" duration="600000" />
       <workItem from="1587723045572" duration="169000" />
+      <workItem from="1587876576210" duration="286000" />
+      <workItem from="1587892055835" duration="299000" />
+      <workItem from="1587920664347" duration="1745000" />
+      <workItem from="1587922436473" duration="756000" />
     </task>
+    <task id="LOCAL-00001" summary="React Form">
+      <created>1587876689223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587876689223</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="React Form" />
+    <option name="LAST_COMMIT_MESSAGE" value="React Form" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1587876683988">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587876683988" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1587578745173">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -112,21 +126,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="645" y="307" width="258" height="210" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1587578395383" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1587706938462">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1587922824994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587706938462" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1587706938462">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587922824994" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1587922824994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587706938462" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1587706938461">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587922824994" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1587922824993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587706938461" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1587706938462">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587922824993" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1587922824994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587706938462" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587922824994" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1587876693852">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587876693852" />
   </component>
 </project>
