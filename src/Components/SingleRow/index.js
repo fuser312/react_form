@@ -15,7 +15,7 @@ class SingleRow extends React.Component {
                 <TableCell align="right">{this.props.rowData.customerID}</TableCell>
                 <TableCell align="right">{this.props.rowData.customerName}</TableCell>
                 <TableCell align="right">{this.props.rowData.gender}</TableCell>
-                <TableCell align="right">{this.props.rowData.phoneNumber}</TableCell>
+                <TableCell align="right">{this.props.rowData.customerPhoneNumber}</TableCell>
                 <TableCell align="right"><button name='Delete'onClick={()=>{
                     this.setState({deletePressed:true})
                     setTimeout(() => {

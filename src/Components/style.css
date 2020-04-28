@@ -5,6 +5,11 @@
 .MuiInputBase-root.MuiInput-root.MuiInput-underline {
     width: 100%;
 }
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.but.MuiButton-containedPrimary{
+    margin-bottom: 20px;
+}
+
 p{
     padding-top: 20px;
 }
@@ -14,8 +19,9 @@ p{
 
 .MuiButton-containedPrimary {
     color: #fff;
-    background-color: #3f51b5;
-    margin-bottom: 20px;
+    background-color: red;
+    /*background-color: #3f51b5;*/
+    margin-bottom: 200px;
 }
 
 .but{

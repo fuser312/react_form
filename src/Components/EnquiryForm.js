@@ -11,6 +11,11 @@ import Paper from '@material-ui/core/Paper';
 
 import SimpleTable from "./Table";
 
+const baseURL = 'https://cors-anywhere.herokuapp.com/';
+
+const deleteURL = baseURL + 'https://us-central1-form-manager-7234f.cloudfunctions.net/deleteCustomer';
+const undoDeleteURL = baseURL + 'https://us-central1-form-manager-7234f.cloudfunctions.net/undoDeleteCustomer';
+
 class EnquiryForm extends React.Component {
     state = {
         customerName: '',
@@ -19,7 +24,20 @@ class EnquiryForm extends React.Component {
         text: "",
         isLoading: false,
         data: [],
+        deletedCustomer:[],
+        deletedCustomerID:'',
+        deletedCustomerIDIndex:'',
     };
+
+
+    componentDidMount() {
+        let data=JSON.parse(localStorage.getItem('userData'));
+        if(data!==null){
+            this.setState({
+                data:data
+            });
+        }
+    }
 
     // constructor(props) {
     //     super(props);
@@ -45,6 +63,11 @@ class EnquiryForm extends React.Component {
     //         gender : event.target.value
     //     })
     // }
+
+    constructor(props) {
+        super(props);
+        this.handleInputChange=this.handleInputChange.bind(this);
+    }
 
     handleInputChange = (event) => {
         let updatedObject = {};
@@ -107,14 +130,31 @@ class EnquiryForm extends React.Component {
         return this.state.isLoading ? this.state.text = "loading" : "";
     }
 
-    deleteUser=(customerID)=>{
+    deleteUser= async (customerID)=>{
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({customerID: customerID})
+        };
+        const response = await fetch(deleteURL, requestOptions);
+        const responseJSON = await response.json();
+        this.setState({
+            deletedCustomerID:customerID,
+
+        })
         let  dataCopy=this.state.data.slice();
-        let newData=[];
-        for(let i=0;i<dataCopy.length;i++){
-            if(dataCopy[i]['customerID']!==customerID){
-                newData.push(dataCopy[i]);
-            }
+        let newData = dataCopy.filter(function (e) {
+            return e['customerID']!== customerID
+            if(e['custmerID']===customerID){
+                let deletedData = e;
+                this.setState({
+                    // deletedCustomerIDIndex:i,
+                    deletedCustomer:deletedData,
+                })
         }
+        });
+
+        localStorage.setItem('userData',JSON.stringify(newData));
         console.log(newData);
         this.setState({
             data:newData
@@ -152,10 +192,10 @@ class EnquiryForm extends React.Component {
                     <div className="inp">
                     <Button variant="contained" color="primary" className="but" onClick={this.handleButtonCLick}>Save Info</Button>
                     </div>
-                    {this.state.isLoading ?
+                    {this.state.isLoading &&
                         <div className="inp">
                             <CircularProgress color="secondary"/>
-                        </div> : null
+                        </div>
                     }
                 </Paper>
 
